@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Skills Index</h1>
+  
+  <ul>
+    <% skills.forEach(function(skill,idx) { %>
+      <li>
+        <%= skill.level %>
+        &mdash;
+        <a href="/skills/<%= idx + 1 %>"><%= skill.name %></a>
+        &mdash;
+        <%= skill.description %>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/skills/new">Add a New Skill</a>
+</body>
+</html>
